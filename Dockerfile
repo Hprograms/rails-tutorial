@@ -4,6 +4,16 @@
 ARG RUBY_VERSION=3.4.5
 FROM registry.docker.com/library/ruby:$RUBY_VERSION-slim as base
 
+FROM ruby:3.4
+
+RUN apt-get update -qq && apt-get install -y \
+  build-essential \
+  libpq-dev \
+  libyaml-dev \
+  nodejs \
+  postgresql-client
+
+
 # Rails app lives here
 WORKDIR /rails
 
