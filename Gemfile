@@ -9,7 +9,7 @@ gem "rails", "~> 7.1.3"
 gem "sprockets-rails"
 
 group :development, :test do
-  gem "sqlite3", "~> 2.7"
+  gem "sqlite3", "~> 2.8"
   gem "debug", platforms: %i[mri mingw x64_mingw]
 end
 
